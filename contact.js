@@ -103,7 +103,7 @@ app.get('/', async(req,res)=>{
                           if(err){console.log(err)}
                           else {console.log('success')}
                         })
-                        res.redirect('http://http://13.250.14.55/home')
+                        res.redirect('http://13.250.14.55/home')
                         
           })
     }
