@@ -27,7 +27,7 @@ const scopes=[
 const oauth2Client = new google.auth.OAuth2(
     "732526071711-urf9k8u1v505hads4susftruhoa250tg.apps.googleusercontent.com",
     "_HGzUN_xC4JFAzEisYrzunuq",
-    "http://localhost:3001/oauth2callback"
+    "http://ec2-54-179-161-126.ap-southeast-1.compute.amazonaws.com:3001/oauth2callback"
   );
   app.use(cors())
 
