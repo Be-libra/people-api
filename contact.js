@@ -103,7 +103,7 @@ app.get('/', async(req,res)=>{
                           if(err){console.log(err)}
                           else {console.log('success')}
                         })
-                        res.redirect('http://localhost:8080/home')
+                        res.redirect('http://http://13.250.14.55/home')
                         
           })
     }
@@ -131,7 +131,17 @@ app.get('/home/contacts',function(req,res){
 })
 
 app.get('/isAuthenticated',function(req,res){
-  res.json(userInfoObject.email)
+  if(userInfoObject.email===''){
+    res.json({isAuthenticated:false})
+  }
+  else{
+    res.json({isAuthenticated:true})
+  }
+  
+})
+app.get('/logout',function(req,res){
+  userInfoObject.email=''
+  res.json({isAuthenticated:false})
 })
 
 
